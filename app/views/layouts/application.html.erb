@@ -11,8 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <ul class="nav navbar-lewagon">
+      <li class="nav-item navbar-brand ml-3">
+        <%= image_tag "noun_Cocktail_2385723.png", alt: "Le Wagon", width: 100 %>
+      </li>
+      <li class="nav-item mr-3 ">
+        <%= link_to 'Add Cocktail', new_cocktail_path, class: 'nav-btn' %>
+      </li>
+    </ul>
+    <div class="container">
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+    </div>
   </body>
 </html>

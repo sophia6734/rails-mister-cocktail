@@ -1,9 +1,12 @@
 <h1>Cocktails</h1>
-<div class="container">
+<div class="card-columns">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
-      <p><%= cocktail.name %></p>
-      <%= link_to 'See Detail', cocktail_path(cocktail) %>
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= cocktail.name.capitalize %></h5>
+        <%= link_to 'See Detail', cocktail_path(cocktail) %>
+      </div>
     </div>
   <% end %>
 </div>

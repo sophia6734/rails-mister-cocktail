@@ -13,10 +13,12 @@
   <body>
     <ul class="nav navbar-lewagon">
       <li class="nav-item navbar-brand ml-3">
+        <%= link_to cocktails_path do %>
         <%= image_tag "noun_Cocktail_2385723.png", alt: "Le Wagon", width: 100 %>
+        <% end %>
       </li>
-      <li class="nav-item mr-3 ">
-        <%= link_to 'Add Cocktail', new_cocktail_path, class: 'nav-btn' %>
+      <li class="nav-item mr-3 mt-1">
+        <%= link_to 'Add Cocktail', new_cocktail_path, class: "btn btn-outline-light" %>
       </li>
     </ul>
     <div class="container">

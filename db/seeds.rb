@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'json'
-require 'byebug'
 
 puts "Cleaning up database..."
 [Cocktail, Ingredient].each(&:destroy_all)

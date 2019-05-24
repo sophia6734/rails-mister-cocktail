@@ -1,8 +1,9 @@
-<h1>Cocktails</h1>
 <div class="card-columns">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
-      <img src="..." class="card-img-top" alt="...">
+      <% if cocktail.photo %>
+        <%= cl_image_tag cocktail.photo, class: "cocktail-img", crop: :fill %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"><%= cocktail.name.capitalize %></h5>
         <%= link_to 'See Detail', cocktail_path(cocktail) %>
@@ -10,3 +11,5 @@
     </div>
   <% end %>
 </div>
+
+

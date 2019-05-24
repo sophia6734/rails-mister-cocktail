@@ -29,7 +29,7 @@ before_action :set_cocktail, only: %i[show destroy]
 
   def cocktail_params
     params.require(:cocktail).permit(
-      :name
+      :name, :photo
     )
   end
 end

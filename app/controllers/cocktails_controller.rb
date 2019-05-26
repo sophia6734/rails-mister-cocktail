@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-before_action :set_cocktail, only: %i[show destroy]
+  before_action :set_cocktail, only: %i[show destroy]
   def new
     @cocktail = Cocktail.new
   end
@@ -19,6 +19,7 @@ before_action :set_cocktail, only: %i[show destroy]
   end
 
   def show
+    @dose = Dose.new
   end
 
   private

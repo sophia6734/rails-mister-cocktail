@@ -7,13 +7,7 @@ cocktail
 <p><%= dose.description %> | <%= dose.ingredient.name %> <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }  %></p>
 <% end %>
 
+<%= render 'doses/form', dose: @dose %>
+
 <%= link_to 'Back', cocktails_path %>
 
-<h4>Add Ingredient</h4>
-<%= simple_form_for @cocktail do |c| %>
-<%= c.simple_fields_for :doses do |d| %>
-  <%= d.association :ingredient %>
-  <%= d.input :description %>
-  <%= d.submit class: "btn btn-primary" %>
-<% end %>
-<% end %>
